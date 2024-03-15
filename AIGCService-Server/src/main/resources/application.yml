@@ -1,0 +1,28 @@
+logging:
+  level:
+    com.easemob.im.http: debug # 启动之后可打印的日志级别
+server:
+  port: 80  # 修改启动端口，只能为数字(请确保该端口没有被占用)
+easemob:
+  appkey: {appkey}  # 创建应用获取到的Appkey，可通过【环信即时通讯云控制台】->【应用详情】页面->【APPKEY】字段获取。
+  clientId: {clientId}   #  App 的 client_id，可通过【环信即时通讯云控制台】->【应用详情】页面->【Client ID】字段获取。
+  clientSecret: {clientSecret}   #  App 的 client_secret，可通过【环信即时通讯云控制台】->【应用详情】页面->【ClientSecret】字段获取。
+miniMax:
+  groupId: {groupId}  # MiniMax基础信息的groupID，可通过【MiniMax账号管理】->【账户信息】页面->【groupID】字段获取。
+  appkey: {appkey}   # MiniMax的接口密钥，当需要复制API密钥的时候，可以重新创建一个以完成复制操作。
+  url: https://api.minimax.chat/v1/text/chatcompletion_pro?GroupId=
+spring:
+  redis:
+    host: {host}           #redis地址
+    port: {port}           #redis端口
+    password: {password}   #redis密码
+    # 连接超时时间（毫秒）
+    timeout: 30000
+    # 连接池中的最大空闲连接
+    max-idle: 8
+    # 连接池中的最小空闲连接
+    min-idle: 10
+    # 连接池最大连接数（使用负值表示没有限制）
+    max-active: 100
+    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    max-wait: -1
